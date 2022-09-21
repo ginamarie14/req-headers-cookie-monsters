@@ -1,1 +1,3 @@
 # req-headers-cookie-monsters
+
+Welcome to Pocket Library! This app is essentially the Spotify for reading. It features a search function that allows users to search through a large database of publications with the ability to select individual titles. It will also allow the user to save these individual titles in a personal library. Pocket Library also features an in-app reader in-app that allows them to view whatever publication they choose on their personal device. Users that want to share their favorite reads with friends will also be able to do so. To access Pocket Library, users will require an account where their personal library will be saved and waiting for them to come back to.
