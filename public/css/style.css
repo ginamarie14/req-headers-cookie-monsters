@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --primary: #81b71a;
+    --secondary: #000000;
+    --tertiary: #7F8389;
+    --quatrinary: #E0E1DD;
+    /*--light: #e3e4e3;*/
+    /*--dark: #182c23;*/
+    --error: rgb(228, 46, 1);
+    --border-radius: 0.3rem;
+  }
+
+aside {
+    flex: 0;
+    background-color: var(--tertiary);
+    padding: 80px;
+    text-align: left;
+    color: var(--light);
+  }
+
+.searchbar {
+    vertical-align: middle;
+}
