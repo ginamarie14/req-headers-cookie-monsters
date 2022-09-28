@@ -6,30 +6,32 @@
   <title>Bookify</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1>Welcome to Bookify!</h1>
+  <header class="bg-green-500">
+    <h1 class="text-zinc-50">Welcome to Bookify!</h1>
   </header>
-  <nav>
-    <a href="/">Home</a>
+  <nav class="bg-neutral-900 flex justify-start">
+    <a href="/" class="text-zinc-50 font-bold">Home</a>
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <button id="logout" class="text-zinc-50 font-bold">Logout</button>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
-    <form id="searchbar">
+    <form id="searchbar" class="items-center">
         <input type="search" id="lookup" name="searchbox" placeholder="Search...">
         <button>Search</button>
     </form>
-    {{!doule check plugging in Google API with search bar}}
   </nav>
   <main>
     <aside>
       <h2>Browse your library</h2>
     </aside>
-    <div class="gallery">
+    <div class="library"> {{!will replace class with tailwind class}}
       {{{body}}}
     </div>
   </main>
