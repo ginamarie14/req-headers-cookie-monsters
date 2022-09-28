@@ -6,8 +6,8 @@ USE library_db;
 create table books (
 	id INT,
 	title VARCHAR(50),
-	Author Last VARCHAR(50),
-	Author First VARCHAR(50),
+	author_last VARCHAR(50),
+	author_first VARCHAR(50),
 	ISBN VARCHAR(50)
 );
 
