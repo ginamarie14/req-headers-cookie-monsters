@@ -4,33 +4,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bookify</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="/public/css/jass.css">
+  <link rel="stylesheet" href="/public/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="bg-green-500">
-    <h1 class="text-zinc-50">Welcome to Bookify!</h1>
+  <header class="flex items-center justify-center flex-wrap bg-green-500 p-10">
+    <h1 class="text-zinc-50 text-3xl">Welcome to Bookify!</h1>
   </header>
-  <nav class="bg-neutral-900 flex justify-start">
-    <a href="/" class="text-zinc-50 font-bold">Home</a>
+  <nav class="flex items-center justify-between bg-neutral-900 p-2">
+    <a href="/" class="text-zinc-50 font-bold mx-10">Home</a>
     {{#if loggedIn}}
-    <button id="logout" class="text-zinc-50 font-bold">Logout</button>
+    <button id="logout" class="text-zinc-50 font-bold mx-10">Logout</button>
     {{else}}
-    <a href="/login">Login</a>
+    <a href="/login" class="text-zinc-50 font-bold mx-10">Login</a>
     {{/if}}
-    <form id="searchbar" class="items-center">
-        <input type="search" id="lookup" name="searchbox" placeholder="Search...">
-        <button>Search</button>
-    </form>
+    <div class="place-content-center">
+      <form class="flex p-1 mr-10">
+        <input type="search" name="searchbox" placeholder="Search for a book, author, ISBN..." class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
+      </form>
+    </div>
   </nav>
   <main>
-    <aside>
-      <h2>Browse your library</h2>
-    </aside>
+    {{!<aside class="bg-neutral-900 h-64 w-32">
+      <h2 class="text-zinc-50 text-xl">Browse the library</h2>
+    </aside>}}
     <div class="library"> {{!will replace class with tailwind class}}
       {{{body}}}
     </div>

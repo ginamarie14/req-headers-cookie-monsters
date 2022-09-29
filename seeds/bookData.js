@@ -293,7 +293,6 @@ const bookData = [
         ISBN: '304745449-3',
         library_id: 42,
     }
-
 ]
 
 const seedBooks = () => Books.bulkcreate(bookData);

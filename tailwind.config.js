@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ['./views/*.handlebars',  './views/*.html', './views/layouts/*.handlebars', './views/layouts/*.html'],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'media',
   theme: {
     screens: {
       sm: '640px',
