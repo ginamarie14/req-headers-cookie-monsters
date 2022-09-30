@@ -23,7 +23,7 @@ Books.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    IBSN: {
+    ISBN: {
       type: DataTypes.STRING,
       allowNull: false,
     },

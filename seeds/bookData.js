@@ -1,3 +1,5 @@
+const Book = require('../models/Books');
+
 const bookData = [
     {
         title: 'Zontrax',
@@ -295,6 +297,6 @@ const bookData = [
     }
 ]
 
-const seedBooks = () => Books.bulkcreate(bookData);
+const seedBooks = () => Book.bulkCreate(bookData);
 
 module.exports = seedBooks;
