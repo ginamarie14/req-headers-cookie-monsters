@@ -33,7 +33,7 @@ router.get('/books/:id', withAuth, async (req, res) => {
       const dbBookData = await Books.findByPk(req.params.id);
 
       const books = dbBookData.get({ plain: true });
-
+console.log(books);
       res.render('books', { books, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);

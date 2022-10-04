@@ -23,8 +23,8 @@
     <a href="/login" class="text-zinc-50 font-bold mx-10">Login</a>
     {{/if}}
     <div class="place-content-center">
-      <form class="flex p-1 mr-10">
-        <input id="searchable" type="search" name="searchbox" placeholder="Search for a book, author, ISBN..." class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white">
+      <form id="search-form" class="flex p-1 mr-10">
+        <input id="search-input" type="search" name="searchbox" placeholder="Search for a book, author, ISBN..." class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
       </form>
     </div>
@@ -40,6 +40,7 @@
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="/js/search.js"></script>
 </body>
 
 
