@@ -1,4 +1,5 @@
-const { search } = require("../../controllers/home-routes");
+//attach listener to form, link to it, user document.queryselector, redirect to search term, etc
+
 
 const searchBar = async (event) => {
     event.preventDefault();
