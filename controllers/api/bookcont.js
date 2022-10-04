@@ -21,8 +21,9 @@ router.get('/', async (req, res) => {
 
 router.get("/:searchTerm", async (req, res) => {
   const searchable = req.params.searchTerm
+  console.log(searchable);
   if (searchable) {
-    const dbBookData = await Books.findAll({
+    const dbBookData = await Books.findOne({
       where: {
         [Op.or]: [
           { title: searchable },

@@ -4,18 +4,12 @@
 const searchBar = async (event) => {
     event.preventDefault();
 
-    const searchable = document.querySelector('#searching').value.trim();
+    const searchable = document.querySelector('#search-input').value.trim();
 
-    if (searchable){
-        const dbBookData = await Books.findAll({
-            where: {
-                [Op.or]: [
-                  { title: searchable },
-                  { author_last: searchable },
-                  { author_first: searchable },
-                ]
-              }
-    })
-    console.log(dbBookData);
+    const response = await fetch("/api/books/" + searchable)
+    const data = await response.json();
+    console.log(data)
+    document.location.replace("/books/" + data.id);
 };
-}
+const form = document.querySelector("#search-form");
+form.addEventListener("submit", searchBar);
